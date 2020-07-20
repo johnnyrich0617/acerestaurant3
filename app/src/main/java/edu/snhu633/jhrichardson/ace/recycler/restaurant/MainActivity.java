@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -39,8 +40,37 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListA
     @Override
     public void onItemClick(AppMainMenuModel item) {
 
-        Toast.makeText(getApplicationContext(), item.getText() + " is clicked",
-                Toast.LENGTH_SHORT).show();
+
+        switch(item.getText()) {
+            case "Our Menu":
+            case "Mobile Order":
+            case "Reservations":
+            case "Beverage Mixer":
+            case "Calorie Counter":
+            case "Catering":
+            case "AboutUs":
+                Toast.makeText(getApplicationContext(), item.getText() + " is clicked",
+                        Toast.LENGTH_SHORT).show();
+                break;
+            case "Directions":
+                try {
+                    double restLat = Double.parseDouble(getResources().getString(R.string.main_location_lat));
+                    double restLong = Double.parseDouble(getResources().getString(R.string.main_location_long));
+                    Intent mapIntent = new Intent(MainActivity.this, AceMapsActivity.class);
+                    mapIntent.putExtra(getResources().getString(R.string.const_lat_key), restLat);
+                    mapIntent.putExtra(getResources().getString(R.string.const_long_key), restLong);
+                    startActivity(mapIntent);
+                }
+                catch (NumberFormatException nfe){
+                    Toast.makeText(getApplicationContext(),
+                            getResources().getString(R.string.error_latlong_parse_exception),
+                            Toast.LENGTH_LONG).show();
+                    nfe.printStackTrace();
+                }
+                //Intent mapIntent = new Intent(MainActivity.this, AceMapsActivity.class);
+                //startActivity(mapIntent);
+        }
+
 
     }
 

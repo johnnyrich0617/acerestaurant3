@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_directions">Ace Restaurant</string>
+    <!-- CONSTANTS FOR ACCESS -->
+    <string name="const_lat_key">DIR_LAT_KEY</string>
+    <string name="const_long_key">DIR_LANG_KEY</string>
+    <!-- Main Ace Restaurant Location -->
+    <string name="main_location_lat">38.319791</string>
+    <string name="main_location_long">-76.456604</string>
+    <string name="error_latlong_parse_exception">Unable to create coordinates for Ace Restaurant</string>
+    <string name="ace_location_pin">Ace Restaurant - Solons Island MD</string>
+</resources>
