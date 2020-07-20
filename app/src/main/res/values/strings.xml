@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Ace Restaurant</string>
+    <string name="card_image">card image</string>
 </resources>

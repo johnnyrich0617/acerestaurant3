@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_menu_items">
+        <item>Our Menu</item>
+        <item>Mobile Order</item>
+        <item>Reservations</item>
+        <item>Beverage Mixer</item>
+        <item>Calorie Counter</item>
+        <item>Catering</item>
+        <item>Directions</item>
+        <item>AboutUs</item>
+    </string-array>
+
+    <string name="log_out">Log Out</string>
+
+    <string name="menu_item">#ffd6cc</string>
+    <string name="mobile_item">#ffd699</string>
+    <string name="reservation_item">#b3d9ff</string>
+    <string name="beverage_item">#80ffd4</string>
+    <string name="calorie_item">#ffe680</string>
+    <string name="catering_item">#e6ccff</string>
+    <string name="directions_item">#99ff99</string>
+    <string name="aboutus_item">#ffb3ec</string>
+</resources>
