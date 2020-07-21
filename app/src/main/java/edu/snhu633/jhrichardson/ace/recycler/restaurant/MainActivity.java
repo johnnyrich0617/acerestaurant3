@@ -48,15 +48,20 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListA
             case "Beverage Mixer":
             case "Calorie Counter":
             case "Catering":
-            case "AboutUs":
                 Toast.makeText(getApplicationContext(), item.getText() + " is clicked",
                         Toast.LENGTH_SHORT).show();
+                break;
+            case "AboutUs":
+                Intent aboutusIntent = new Intent(MainActivity.this,
+                        AboutUsActivity.class);
+                startActivity(aboutusIntent);
                 break;
             case "Directions":
                 try {
                     double restLat = Double.parseDouble(getResources().getString(R.string.main_location_lat));
                     double restLong = Double.parseDouble(getResources().getString(R.string.main_location_long));
-                    Intent mapIntent = new Intent(MainActivity.this, AceMapsActivity.class);
+                    Intent mapIntent = new Intent(MainActivity.this,
+                            AceMapsActivity.class);
                     mapIntent.putExtra(getResources().getString(R.string.const_lat_key), restLat);
                     mapIntent.putExtra(getResources().getString(R.string.const_long_key), restLong);
                     startActivity(mapIntent);
@@ -67,8 +72,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListA
                             Toast.LENGTH_LONG).show();
                     nfe.printStackTrace();
                 }
-                //Intent mapIntent = new Intent(MainActivity.this, AceMapsActivity.class);
-                //startActivity(mapIntent);
         }
 
 
