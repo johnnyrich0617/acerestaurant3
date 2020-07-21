@@ -13,6 +13,11 @@ import java.util.ArrayList;
 import edu.snhu633.jhrichardson.ace.recycler.restaurant.list.adapters.AboutUsListItemAdapter;
 import edu.snhu633.jhrichardson.ace.recycler.restaurant.model.AboutUsListItemModel;
 
+/**
+ * The activity managing the AboutUs visual
+ *
+ * @author jhrichardson
+ */
 public class AboutUsActivity extends AppCompatActivity {
 
     @Override
@@ -20,6 +25,7 @@ public class AboutUsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
+        //Get the List items and metadata from the resources
         String[] aboutUsItemTags = getResources().
                 getStringArray(R.array.aboutus_list_item_tags);
         String[] aboutUsBluffs = getResources().getStringArray(R.array.aboutus_list_item_bluffs);
@@ -32,8 +38,10 @@ public class AboutUsActivity extends AppCompatActivity {
             aboutUsItems.add(index, new AboutUsListItemModel(iconId, listItem, aboutUsBluffs[index]));
             index ++;
         }
+        //Create the ListAdapter used to manage the list items
         AboutUsListItemAdapter aboutUsAdapter = new AboutUsListItemAdapter
                 (this,aboutUsItems);
+        //get the listView and attach the adapter to it
         ListView listView = findViewById(R.id.aboutuslistview);
         listView.setAdapter(aboutUsAdapter);
 
@@ -43,6 +51,7 @@ public class AboutUsActivity extends AppCompatActivity {
                                   startActivity(someIntent);
           to create and start the correct activity
          */
+        //TODO: Create new fragments for each list items in the AboutUs List
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -82,6 +91,11 @@ public class AboutUsActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Private utility method to retrieve image references
+     * @param listItem The listItem Title
+     * @return The associated Image reference from resources
+     */
     private int getMenuIcon(String listItem) {
         if(listItem.contains("General Manager")){
             return R.drawable.general_manager;

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.snhu633.jhrichardson.ace.recycler.restaurant">
     <!--
+         GoogleMaps
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
@@ -15,10 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AboutUsActivity"
-            android:screenOrientation="portrait">
 
-        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -34,13 +32,30 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
+            <!--
+            List of activities in this application
+            -->
+
+        <!--
+        AboutUsActivity
+        Restrict this activity to Portrait only
+        -->
+        <activity
+            android:name=".AboutUsActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- GoogleMaps Activity -->
         <activity
             android:name=".AceMapsActivity"
             android:label="@string/title_activity_ace_maps" />
-        <activity android:name=".MainActivity">
+
+        <!--  This Activity is the main menu for the application -->
+        <activity android:name=".MainActivity"/>
+
+        <!-- Starting the splash screen -->
+        <activity android:name=".AceSplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
