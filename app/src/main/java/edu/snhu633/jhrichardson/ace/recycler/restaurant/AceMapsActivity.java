@@ -11,6 +11,11 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+/**
+ * GoogleMaps Implementation
+ *
+ * @author jhrichardson
+ */
 public class AceMapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -27,6 +32,7 @@ public class AceMapsActivity extends FragmentActivity implements OnMapReadyCallb
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        //Async fetch the map from google play services and notify when done
         mapFragment.getMapAsync(this);
     }
 
@@ -40,11 +46,11 @@ public class AceMapsActivity extends FragmentActivity implements OnMapReadyCallb
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        //the map retrieved from Google Play services
         mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
-        //LatLng sydney = new LatLng(-34, 151);
+        //Set the lat/long for the restaurant from the coordinates in the resources
         LatLng ace = new LatLng(this.restaurant_lat, this.restaurant_long);
+        //Add a pin to the map
         mMap.addMarker(new MarkerOptions().position(ace).title(getResources().
                 getString(R.string.ace_location_pin)));
         //Set the camera to the maker and zoom to street level

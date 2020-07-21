@@ -8,13 +8,20 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
 import edu.snhu633.jhrichardson.ace.recycler.restaurant.model.AboutUsListItemModel;
 import edu.snhu633.jhrichardson.ace.recycler.restaurant.R;
 
+/**
+ * This class extends the ArrayAdapter class.  It provides the view for a list of
+ * objects.  In this case, a list of AboutUsListItemModel.  It is used in conjunction
+ * with the about_us_list_item_view layout.
+ * @see android.widget.ArrayAdapter
+ *
+ * @author jhrichardson
+ */
 public class AboutUsListItemAdapter extends ArrayAdapter<AboutUsListItemModel> {
 
     private static final String LOG_TAG = AboutUsListItemAdapter.class.getSimpleName();

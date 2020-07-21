@@ -13,6 +13,13 @@ import java.util.ArrayList;
 import edu.snhu633.jhrichardson.ace.recycler.restaurant.list.adapters.RecyclerViewListAdapter;
 import edu.snhu633.jhrichardson.ace.recycler.restaurant.model.AppMainMenuModel;
 
+/**
+ * This activity sets up the main menu for the application.  It uses a RecyclerView and
+ * GridLayoutManager to create and manage the children in the list.  It is constructed as
+ * a "List of Links" pattern, but displayed as cards.
+ *
+ * @author jhrichardson
+ */
 public class MainActivity extends AppCompatActivity implements RecyclerViewListAdapter.ItemListener {
 
     RecyclerView recyclerView;
@@ -27,20 +34,33 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListA
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         this.menuItemList = getMenuItems();
 
+        //create the adapter and register the ItemListener as this class
         RecyclerViewListAdapter adapter = new RecyclerViewListAdapter(menuItemList, this,
                 this);
         recyclerView.setAdapter(adapter);
 
+        // create the GridLayOutManager to manage the children in the list
         GridLayoutManager manager = new GridLayoutManager(this, 2,
                 GridLayoutManager.VERTICAL, true);
         recyclerView.setLayoutManager(manager);
 
     }
 
+    /**
+     * The implementation of the ItemListener onItemClick callback
+     * @param item  The listItem that has been clicked
+     *
+     * @see edu.snhu633.jhrichardson.ace.recycler.restaurant.model.AppMainMenuModel
+     */
     @Override
     public void onItemClick(AppMainMenuModel item) {
+        /*
+        From the invoking ListItem, determine which child has been clicked
+        and start the associated Activity.
 
-
+        For this class I was responsible for the functionality set for the AboutUs and Directions
+        Activities.
+         */
         switch(item.getText()) {
             case "Our Menu":
             case "Mobile Order":
@@ -77,6 +97,11 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListA
 
     }
 
+    /**
+     * Private Utility Method to create the menu list of ListItems
+     * @return  ArrayList of AppMainMenuModel
+     * @see edu.snhu633.jhrichardson.ace.recycler.restaurant.model.AppMainMenuModel
+     */
     private ArrayList<AppMainMenuModel> getMenuItems() {
         int index = 0;
         ArrayList<AppMainMenuModel> alist = new ArrayList<>();
@@ -89,6 +114,12 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListA
         return alist;
     }
 
+    /**
+     * Private Utility Method top fetch the associated color
+     * for a menu item tile
+     * @param menuItem  the menu item to lookup
+     * @return The string representation of the color
+     */
     private String getColorForItem(String menuItem) {
         if(menuItem.contains("Menu")){
             return getResources().getString(R.string.menu_item);
@@ -119,6 +150,12 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListA
             }
     }
 
+    /**
+     * Private Utility Method top fetch the associated image
+     * for a menu item tile
+     * @param menuItem  the menu item to lookup
+     * @return The int representation of the image
+     */
     private int getImageForItem(String menuItem) {
         if(menuItem.contains("Menu")){
             return R.drawable.menu;
