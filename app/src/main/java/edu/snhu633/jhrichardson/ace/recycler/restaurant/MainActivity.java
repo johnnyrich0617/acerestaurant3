@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListA
         recyclerView.setAdapter(adapter);
 
         GridLayoutManager manager = new GridLayoutManager(this, 2,
-                GridLayoutManager.VERTICAL, false);
+                GridLayoutManager.VERTICAL, true);
         recyclerView.setLayoutManager(manager);
 
     }
