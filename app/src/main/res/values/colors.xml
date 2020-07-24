@@ -9,4 +9,7 @@
     <color name="color_light_splash">#8d7d7d</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="light_brown">#D1C7C7</color>
+    <color name="llight_drak_brown">#BEAFAF</color>
+    <color name="skin">#D0B1B1</color>
 </resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    tools:context=".AboutUsFlipViewActivity">
+    <!-- tools:showIn="@layout/activity_about_us_flip_view"> -->
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:id="@+id/aboutus_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ADECCFC5">
+
+
+            <ImageView
+                android:id="@+id/aboutus_image"
+                android:layout_width="match_parent"
+                android:layout_height="358dp"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/about_us_image"
+                android:scaleType="center"
+                android:src="@drawable/ace_med_2" />
+
+            <TextView
+                android:id="@+id/aboutus_text"
+                android:layout_width="391dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutus_image"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/andada"
+                android:lineSpacingExtra="7sp"
+                android:paddingStart="3dp"
+                android:text="@string/aboutus_paragraph"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutus_text"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="158dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/archivo_narrow_bold"
+                    android:text="@string/our_notables"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/right_chev100x100" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/notable_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:background="@android:color/darker_gray"
+                android:contentDescription="TODO"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="Second Child"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ViewFlipper>
+</RelativeLayout>

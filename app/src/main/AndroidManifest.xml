@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".AboutUsFlipViewActivity"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -31,31 +31,22 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
-            <!--
-            List of activities in this application
-            -->
-
+        <!--             List of activities in this application -->
         <!--
         AboutUsActivity
         Restrict this activity to Portrait only
         -->
         <activity
             android:name=".AboutUsActivity"
-            android:screenOrientation="portrait"/>
-
-        <!-- GoogleMaps Activity -->
+            android:screenOrientation="portrait" /> <!-- GoogleMaps Activity -->
         <activity
             android:name=".AceMapsActivity"
-            android:label="@string/title_activity_ace_maps" />
-
-        <!--  This Activity is the main menu for the application -->
-        <activity android:name=".MainActivity"/>
-
-        <!-- Starting the splash screen -->
+            android:label="@string/title_activity_ace_maps" /> <!-- This Activity is the main menu for the application -->
+        <activity android:name=".MainActivity" /> <!-- Starting the splash screen -->
         <activity android:name=".AceSplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
