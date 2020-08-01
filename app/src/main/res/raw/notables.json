@@ -1,0 +1,40 @@
+{
+  "cards": [
+    {
+      "cardIconName": "generalmanager",
+      "cardTitle": "General Manager",
+      "cardName": "Michelle Perth",
+      "cardText": "Michelle started with Ace in 2012. This talented young woman has 15 years of restaurant experience.  Michelle brightens any room she is in and will go out of her way to ensure you and your guests have the very best experience here at Ace"
+    },
+    {
+      "cardIconName": "asstmanager",
+      "cardTitle": "Assistant Manager",
+      "cardName": "Peter Finch",
+      "cardText": "Peter is the rising star here at Ace, This man will go of his way to make others feel comfortable and happy. He has been with us for over 6 years and completely understands every aspect of running a restaurant.  If you see him please say Hello."
+    },
+    {
+      "cardIconName": "chef",
+      "cardTitle": "Our Chef",
+      "cardName": "James Filmore",
+      "cardText": "Two words comes to mind when speaking about James, Pure Artistry! James is actually one of the owners here at Ace.  All of our success is built on the fantastic tasty dishes he is constantly inventing."
+    },
+    {
+      "cardIconName": "mixologist",
+      "cardTitle": "Mixology Manager",
+      "cardName": "Joy Filmore",
+      "cardText": "Joy has been mixing cocktails for over 20 years.  She has delighted her fans all over the United States and Europe with her wonderful concoctions.  And Yes, Joy is the wife of James our Chef"
+    },
+    {
+      "cardIconName": "hostess",
+      "cardTitle": "Our Lead Host",
+      "cardName": "Linda Banks",
+      "cardText": "Linda is probably the first employee you will meet when you visit Ace.  She has recently finished Law School and is studying for the Bar Exam.  Please wish her luck because we sure do!"
+    },
+    {
+      "cardIconName": "eom",
+      "cardTitle": "Employee of the Month",
+      "cardName": "James (Jimmy) Boyle",
+      "cardText": "Jimmy has been with Ace for three years as he woks his way towards his undergrad.  He has proven himself to be a total asset and team player and if your lucky to sit in his section you will soon see him at work!"
+    }
+  ]
+}

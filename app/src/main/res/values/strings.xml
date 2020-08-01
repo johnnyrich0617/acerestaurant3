@@ -8,4 +8,7 @@
     <string name="about_us_image">about us Image</string>
     <string name="swipe_left">Swipe to see our notables</string>
     <string name="our_notables">Our Notables</string>
+    <string name="notables_button">notables button</string>
+    <string name="view_our_notables">View Our Notables</string>
+    <string name="card_image_icon">card Image</string>
 </resources>
