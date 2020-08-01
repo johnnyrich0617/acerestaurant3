@@ -8,5 +8,5 @@
     <string name="main_location_lat">38.319791</string>
     <string name="main_location_long">-76.456604</string>
     <string name="error_latlong_parse_exception">Unable to create coordinates for Ace Restaurant</string>
-    <string name="ace_location_pin">Ace Restaurant - Solons Island MD</string>
+    <string name="ace_location_pin">Ace Restaurant - Solomons Island MD</string>
 </resources>
