@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListA
                 break;
             case "AboutUs":
                 Intent aboutusIntent = new Intent(MainActivity.this,
-                        AboutUsActivity.class);
+                        AboutUsViewActivity.class);
                 startActivity(aboutusIntent);
                 break;
             case "Directions":

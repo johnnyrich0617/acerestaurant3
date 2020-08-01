@@ -30,32 +30,23 @@
             android:value="@string/google_maps_key" />
         <meta-data
             android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
-
-            <!--
-            List of activities in this application
-            -->
-
+            android:resource="@array/preloaded_fonts" /> <!-- List of activities in this application -->
         <!--
         AboutUsActivity
         Restrict this activity to Portrait only
         -->
-        <activity
-            android:name=".AboutUsActivity"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".NotablesViewActivity"/>
+        <activity android:name=".AboutUsViewActivity" />
 
         <!-- GoogleMaps Activity -->
         <activity
             android:name=".AceMapsActivity"
-            android:label="@string/title_activity_ace_maps" />
-
-        <!--  This Activity is the main menu for the application -->
-        <activity android:name=".MainActivity"/>
-
-        <!-- Starting the splash screen -->
+            android:label="@string/title_activity_ace_maps" /> <!-- This Activity is the main menu for the application -->
+        <activity android:name=".MainActivity" /> <!-- Starting the splash screen -->
         <activity android:name=".AceSplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
