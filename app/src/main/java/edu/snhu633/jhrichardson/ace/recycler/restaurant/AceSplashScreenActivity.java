@@ -37,6 +37,14 @@ public class AceSplashScreenActivity extends AwesomeSplash {
         configSplash.setAnimLogoSplashDuration(2000); //int ms
         //choose one form Techniques (ref: https://github.com/daimajia/AndroidViewAnimations)
         configSplash.setAnimLogoSplashTechnique(Techniques.Landing);
+
+        //Customize Title
+        configSplash.setTitleSplash(getString(R.string.app_name));
+        configSplash.setTitleTextColor(R.color.black);
+        configSplash.setTitleTextSize(30f); //float value
+        configSplash.setAnimTitleDuration(2000);
+        configSplash.setAnimTitleTechnique(Techniques.SlideInLeft);
+        //configSplash.setTitleFont("fonts/art_brewery.ttf");
     }
 
     /**

@@ -60,7 +60,7 @@ public class NotablesViewActivity extends AppCompatActivity
 
     /**
      * Reads the JSON file containing the model data for this activity
-     * @return madel data List
+     * @return The data model for the notables list
      */
     private ArrayList <AboutUsCardViewModel> getLayoutModel() {
 
@@ -115,10 +115,11 @@ public class NotablesViewActivity extends AppCompatActivity
 
     /**
      * Utility method to read the JSON resource file
-     * @return the JSON string representation
+     * @return the JSON string representation of the data model
      */
     private String getJson() {
         String returnString;
+        //Get the InputStream from the file system
         InputStream is = getResources().openRawResource(R.raw.notables);
         Writer writer = new StringWriter();
         char[] buffer = new char[1024];
@@ -145,8 +146,16 @@ public class NotablesViewActivity extends AppCompatActivity
         }
     }
 
+    /**
+     * onClick callback for selection of a card
+     * @param item the card that was selected
+     */
     @Override
     public void onItemClick(AboutUsCardViewModel item) {
-
+        //TODO: this is not an explicit functional requirement, but added for future implementation
+        /*
+        This method will be used to implement onClick events for each card in the card list
+        it can then allow for a larger view of each card with addition information if needed
+         */
     }
 }
